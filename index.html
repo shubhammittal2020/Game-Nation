@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>
+            Game Nation
+        </title>
+        <link rel='stylesheet' href='./styles/bootstrap.min.css'/>
+        <style>
+            body {background-image:url("./images/labours.jpg");}
+        </style>
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    </head>
+    
+    <body>
+        <div class='container'>
+            <div class='jumbotron'>
+                <h1 align="center">Enter The Fun World</h1>
+            </div>
+        </div>
+        
+        <div>
+            <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
+            <div style="font-family: 'Tangerine', serif; font-size: 300px; text-shadow: 4px 4px 4px #aaa;" align="center">
+                    Game Nation
+            </div>
+        </div>
+        
+        <div class="container">
+            <form class="row" action="eventinformation.html">
+                <div class="col-md-2"></div>
+                <!-- Trigger the modal with a button -->
+                <button type="button" class="btn btn-info btn-lg" id="myPBtn">Participant</button>
+                <div class="col-md-2"></div>
+                <!-- Trigger the modal with a button -->
+                <button type="button" class="btn btn-info btn-lg" id="myJBtn">Judge</button>
+                <div class="col-md-2"></div>
+                <!-- Trigger the modal with a button -->
+                <button type="submit" class="btn btn-info btn-lg" id="myEBtn">Event Info</button>
+                <div class="col-md-2"></div>
+            </form>
+        </div>
+        </br>
+  
+        <!-- Modal -->
+        <!-- Participant Modal -->
+        <form name="ploginpage" action="sportslist.html" method="post" onsubmit="validateform()">
+        <div class="modal fade" id="myParticipantModal" role="dialog">
+            <div class="modal-dialog">
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Participant Box</h4>
+                    </div>
+                    <div class="modal-body">
+                        <table align="center" width="40%" cellspacing="10" cellpadding="8" id="t01" >
+                            <tr> <h1 align="center">LOGIN</h1> </tr>
+                            <tr>
+                                <td>E-Mail ID</td>
+                                <td><input type ="USER ID" placeholder="must be in small letters" size="25" maxlength="60" name="email"/></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    </br>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Password</td>
+                                <td><input type ="password" placeholder="must be unique" size="25" maxlength="50" name="pass"/></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    </br>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><input type="submit" value="LOGIN" /></td>
+                                <td></td>
+                                <td><a href="ParticipantRegistration.html"><input type="button" value="Register" /></a></td>
+                            </tr>
+                        </table>
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-sm-offset-2 col-sm-10">
+                                    <div class="checkbox">
+                                        <label><input type="checkbox"> Remember me </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    	</form>
+        <!-- Judge Modal -->
+        <form name="jloginpage" action="judgeprofile.html" method="post" onsubmit="validateform()">
+        <div class="modal fade" id="myJudgeModal" role="dialog">
+            <div class="modal-dialog">
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Judge Box</h4>
+                    </div>
+                    <div class="modal-body">
+                        <table align="center" width="40%" cellspacing="10" cellpadding="8" id="t01" >
+                            <tr> <h1 align="center">LOGIN</h1> </tr>
+                            <tr>
+                                <td>E-Mail ID</td>
+                                <td><input type ="USER ID" placeholder="must be in small letters" size="25" maxlength="60" name="email"/></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    </br>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Password</td>
+                                <td><input type ="password" placeholder="must be unique" size="25" maxlength="50" name="pass"/></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    </br>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><input type="submit" value="LOGIN" /></td>
+                                <td></td>
+                                <td><a href="JudgeRegistration.html"><input type="button" value="Register" /></a></td>
+                            </tr>
+                        </table>
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-sm-offset-2 col-sm-10">
+                                    <div class="checkbox">
+                                        <label><input type="checkbox"> Remember me </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+        </form>
+
+        <script>
+            $(document).ready(function(){
+                $("#myPBtn").click(function(){
+                    $("#myParticipantModal").modal();
+                });
+            });
+        </script>
+        <script>
+            $(document).ready(function(){
+                $("#myJBtn").click(function(){
+                    $("#myJudgeModal").modal();
+                });
+            });
+        </script>
+
+        <script type="text/javascript">
+        	function validateform()
+        	{
+        		var x=document.ploginpage.email.value;
+        		var y=document.form.pass.value;
+        		if (x="shubham" && y="shubham123")
+        		{
+        			return true;
+        		}
+        	}
+        </script>
+        <script type="text/javascript">
+        	function validateform()
+        	{
+        		var x=document.jloginpage.email.value;
+        		var y=document.form.pass.value;
+        		if (x="shubham" && y="shubham123")
+        		{
+        			return true;
+        		}
+        	}
+        </script>
+
+    </body>
+</html>
